@@ -1,0 +1,12 @@
+{"record":{"type":"access_log","timestamp":"2025-05-01T12:02:00Z","userId":" ","ip":"10.0.0.3"},"error":"User id is empty"}
+{"record":{"type":"access_log","timestamp":"2025-05-01T12:03:00Z","userId":"user-789","ip":"not-an-ip"},"error":"Ip invalid"}
+{"record":{"type":"access_log","userId":"user-000","ip":"192.168.0.4"},"error":"Timestamp is missing!"}
+{"record":{"type":"transaction","amount":0,"currency":"EUR","timestamp":"2025-05-01T12:11:00Z"},"error":"Invalid amount"}
+{"record":{"type":"transaction","amount":"-100","currency":"usd","timestamp":"2025-05-01T12:12:00Z"},"error":"Invalid amount"}
+{"record":{"type":"transaction","amount":"not-a-number","currency":"usd","timestamp":"2025-05-01T12:13:00Z"},"error":"Invalid amount"}
+{"record":{"type":"transaction","amount":"100.00","currency":"","timestamp":"2025-05-01T12:14:00Z"},"error":"Currency incorrect"}
+{"record":{"type":"transaction","amount":"100.00","currency":"usd","timestamp":"not-a-date"},"error":"Invalid timestamp format!"}
+{"record":{"type":"transaction","amount":"100.00","currency":"usd"},"error":"Timestamp is missing!"}
+{"record":{"type":"system_error","timestamp":"2025-05-01T12:18:00Z","level":"info","message":" "},"error":"Message is empty!"}
+{"record":{"type":"system_error","level":"info","message":"No timestamp"},"error":"Timestamp is missing!"}
+{"record":{"type":"system_error","timestamp":"2025-05-01T12:20:00Z","level":"info"},"error":"Cannot read properties of undefined (reading 'trim')"}
